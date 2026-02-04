@@ -4,7 +4,6 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-// BASIC DATA
 const cloudData = [
   {
     type: "IaaS",
@@ -26,7 +25,6 @@ const cloudData = [
   }
 ];
 
-// DETAILED DATA
 const detailedCloudData = {
   IaaS: {
     features: ["Virtual Machines", "Storage", "Networking"],
@@ -42,18 +40,15 @@ const detailedCloudData = {
   }
 };
 
-// ENDPOINT 1: BASIC INFO
 app.get("/api/cloud", (req, res) => {
   res.json(cloudData);
 });
 
-// ENDPOINT 2: DETAILS
 app.get("/api/cloud/:type", (req, res) => {
   const type = req.params.type;
   res.json(detailedCloudData[type]);
 });
 
-// START SERVER
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);

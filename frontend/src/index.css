@@ -72,20 +72,19 @@ button {
   font-size: 0.9rem;
   cursor: pointer;
   transition: background 0.2s;
-  margin-top: auto; /* Pushes button to bottom */
+  margin-top: auto; 
 }
 
 button:hover {
   background-color: #e2e2e2;
 }
 
-/* Simple Details View */
 .details {
   background: #ffffff;
   border: 1px solid #eaeaea;
   max-width: 500px;
   margin: 0 auto;
-  text-align: left; /* Easier to read details when left-aligned */
+  text-align: left; 
 }
 
 .details h2 {
@@ -101,7 +100,6 @@ li {
   margin-bottom: 8px;
 }
 
-/* "Back" button should look different to stand out */
 .details button {
   display: block;
   margin: 20px auto 0;

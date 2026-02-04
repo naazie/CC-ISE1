@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [services, setServices] = useState([]);
   const [details, setDetails] = useState(null);
-  const [loading, setLoading] = useState(false); // New loading state
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     fetch("https://cloud-backend-6jrg.onrender.com/api/cloud")
@@ -13,12 +13,12 @@ function App() {
   }, []);
 
   const viewDetails = (type) => {
-    setLoading(true); // Start loading
+    setLoading(true); 
     fetch(`https://cloud-backend-6jrg.onrender.com/api/cloud/${type}`)
       .then((res) => res.json())
       .then((data) => {
         setDetails({ type, ...data });
-        setLoading(false); // Stop loading
+        setLoading(false); 
       })
       .catch((err) => {
         console.error("Error fetching details:", err);
@@ -30,7 +30,6 @@ function App() {
     <div className="container">
       <h1>Cloud Service Models</h1>
 
-      {/* Hide the list when showing details to keep the UI clean */}
       {!details ? (
         <div className="cards">
           {services.map((service, index) => (
@@ -49,7 +48,6 @@ function App() {
           ))}
         </div>
       ) : (
-        /* Detailed View Section */
         <div className="card details">
           <h2>{details.type} – Details</h2>
           <p><strong>Users:</strong> {details.users}</p>
