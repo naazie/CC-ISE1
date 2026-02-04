@@ -6,7 +6,7 @@ function App() {
   const [loading, setLoading] = useState(false); // New loading state
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/cloud")
+    fetch("https://cloud-backend-6jrg.onrender.com/api/cloud")
       .then((res) => res.json())
       .then((data) => setServices(data))
       .catch((err) => console.error("Error fetching services:", err));
@@ -14,7 +14,7 @@ function App() {
 
   const viewDetails = (type) => {
     setLoading(true); // Start loading
-    fetch(`http://localhost:5000/api/cloud/${type}`)
+    fetch(`https://cloud-backend-6jrg.onrender.com/api/cloud/${type}`)
       .then((res) => res.json())
       .then((data) => {
         setDetails({ type, ...data });
