@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fafafa; /* Very light gray */
+  color: #444;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* Horizontal line-up of cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #eaeaea; /* Light border instead of heavy shadow */
+  border-radius: 12px;
+  padding: 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: #0070f3; /* Subtle blue highlight on hover */
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  color: #0070f3; /* Clean blue */
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Minimalist Button */
+button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: auto; /* Pushes button to bottom */
+}
+
+button:hover {
+  background-color: #e2e2e2;
+}
+
+/* Simple Details View */
+.details {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left; /* Easier to read details when left-aligned */
+}
+
+.details h2 {
+  text-align: center;
+}
+
+ul {
+  padding-left: 20px;
+  color: #555;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* "Back" button should look different to stand out */
+.details button {
+  display: block;
+  margin: 20px auto 0;
+  background: transparent;
+  color: #0070f3;
+  text-decoration: underline;
+}
