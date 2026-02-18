@@ -1,53 +1,13 @@
 const express = require("express");
 const cors = require("cors");
+const routes = require("./routes");
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
-const cloudData = [
-  {
-    type: "IaaS",
-    description:
-      "Infrastructure as a Service provides virtualized computing resources over the internet.",
-    examples: ["AWS EC2", "Google Compute Engine"]
-  },
-  {
-    type: "PaaS",
-    description:
-      "Platform as a Service provides a platform for developers to build and deploy applications.",
-    examples: ["Heroku", "Render"]
-  },
-  {
-    type: "SaaS",
-    description:
-      "Software as a Service delivers software applications over the internet.",
-    examples: ["Gmail", "Google Drive"]
-  }
-];
-
-const detailedCloudData = {
-  IaaS: {
-    features: ["Virtual Machines", "Storage", "Networking"],
-    users: "System administrators and IT teams"
-  },
-  PaaS: {
-    features: ["Application Runtime", "Development Tools", "Auto Scaling"],
-    users: "Application developers"
-  },
-  SaaS: {
-    features: ["Web-based Access", "No Installation", "Subscription Based"],
-    users: "End users"
-  }
-};
-
-app.get("/api/cloud", (req, res) => {
-  res.json(cloudData);
-});
-
-app.get("/api/cloud/:type", (req, res) => {
-  const type = req.params.type;
-  res.json(detailedCloudData[type]);
-});
+// use all routes
+app.use("/api", routes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -107,3 +107,87 @@ li {
   color: #0070f3;
   text-decoration: underline;
 }
+
+/* .providers {
+  margin-top: 40px;
+}
+.form input, .form select {
+  padding: 6px;
+  margin: 5px;
+}
+.form button {
+  padding: 6px 12px;
+}
+li {
+  margin: 6px 0;
+} */
+
+/* --- Pretty Add Form --- */
+.providers {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form input, .form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 180px;
+}
+
+.form input:focus,
+.form select:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.add-btn {
+  background: #0070f3;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-btn:hover {
+  background: #0059c9;
+}
+.delete-btn {
+  margin-left: 10px;
+  background: #ff4d4d;
+  color: white;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+.provider-item {
+  background: #fff;
+  padding: 12px 15px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
